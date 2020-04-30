@@ -1,0 +1,93 @@
+.outer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    padding: 10px 5px;
+    background-color: white;
+    display: default;
+    justify-content: default;
+    align-items: default;
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
+.header {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.title {
+    background-color: lightblue;
+    text-align: center;
+    font-size: x-large;
+}
+
+.title a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+.new-card-form-outer {
+    margin: 20px auto;
+    padding: 5px;
+    background-color: lightblue;
+    width: 340px;
+}
+
+.input-size {
+    width: 380px;
+    margin-left: 10px;
+}
+
+.new-card-form button {
+    margin: 3px auto;
+}
+
+.router-content {
+    margin-left: 10px;
+}
+
+.round-corners {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.cdk-drag-placeholder {
+    opacity: 0;
+}
+
+.cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.card-column.cdk-drop-list-dragging .phrase-box:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 1024px) {
+    .outer-box {
+        width: 850px;
+    }
+     :host {
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .outer-box {
+        width: 700px;
+    }
+}

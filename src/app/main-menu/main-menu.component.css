@@ -1,0 +1,25 @@
+.outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+    background-color: lightblue;
+}
+
+.router-menu {
+    margin: 10px;
+    text-align: center;
+}
+
+.round-corners {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+    .outer {
+        overflow: scroll;
+    }
+}

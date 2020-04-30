@@ -1,0 +1,26 @@
+.phrase-card {
+    color: black;
+    margin: 5px;
+    cursor: move;
+    width: 306px;
+}
+
+.edit-phrase-form {
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .phrase-card {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .phrase-card {
+        width: 190px;
+    }
+}

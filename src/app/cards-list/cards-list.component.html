@@ -1,0 +1,39 @@
+<div class="outer-box">
+    <div class="content round-corners">
+        <div class="header">
+            <div class="title round-corners">
+                <h1>New phrases for today</h1>
+            </div>
+        </div>
+        <table width="100%" cellspacing="0">
+            <tr valign="top" cdkDropListGroup>
+                <td cdkDropList [cdkDropListData]="i" (cdkDropListDropped)="drop($event)" *ngFor="let column of columns; index as i" class="card-column">
+                    <div *ngFor="let randomPhrase of column" class="phrase-box" cdkDrag>
+                        <app-card [phrase]="randomPhrase"></app-card>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="new-card-form-outer round-corners">
+            <form [formGroup]="newCardForm" class="new-card-form" (ngSubmit)="createNewCard()">
+                <mat-form-field class="input-size">
+                    <mat-label>TITLE</mat-label>
+                    <input matInput type="text" formControlName="title">
+                </mat-form-field>
+
+                <mat-form-field class="input-size">
+                    <mat-label>TEXT</mat-label>
+                    <input matInput type="text" formControlName="sourceText">
+                </mat-form-field>
+
+                <mat-form-field class="input-size">
+                    <mat-label>TRANSLATE</mat-label>
+                    <input matInput type="text" formControlName="translation">
+                </mat-form-field>
+                <div>
+                    <button mat-button type="submit">CREATE</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

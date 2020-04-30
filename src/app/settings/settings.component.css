@@ -1,0 +1,44 @@
+.outer {
+    margin: 10px auto;
+    width: 200px;
+    background-color: white;
+    padding: 5px;
+}
+
+.full-width {
+    width: 190px;
+    margin: 0 3px;
+    border: 0;
+    padding-left: 3px;
+}
+
+.title h2 {
+    margin: 0;
+    text-align: center;
+    background-color: lightblue;
+}
+
+.content p {
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+.content {
+    margin-top: 5px;
+    background-color: lightblue;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.round-corners {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+    .outer {
+        overflow: scroll;
+    }
+}

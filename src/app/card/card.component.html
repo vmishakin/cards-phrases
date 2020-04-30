@@ -1,0 +1,30 @@
+<mat-card class="phrase-card" (click)="translateCard()" [ngStyle]="{'background-color': phrase.color}">
+    <mat-card-header>
+        <mat-card-title>{{phrase.theme}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p *ngIf="isTranslated">
+            {{ phrase.translation }}
+        </p>
+        <p *ngIf="!isTranslated">
+            {{ phrase.sourceText }}
+        </p>
+        <div *ngIf="isCardOnEdit">
+            <form [formGroup]="editForm" id="editForm" class="edit-phrase-form" (ngSubmit)="onAccept()">
+                <mat-form-field class="full-width">
+                    <mat-label>Text</mat-label>
+                    <input matInput type="text" formControlName="sourceText" required>
+                </mat-form-field>
+
+                <mat-form-field class="full-width">
+                    <mat-label>Translate</mat-label>
+                    <input matInput type="text" formControlName="translation" required>
+                </mat-form-field>
+            </form>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="editInit()">EDIT</button>
+        <button *ngIf="isCardOnEdit" mat-button type="submit" form="editForm" [disabled]="!editForm.valid">OK</button>
+    </mat-card-actions>
+</mat-card>
